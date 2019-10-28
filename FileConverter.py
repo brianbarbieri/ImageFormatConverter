@@ -26,7 +26,7 @@ if not os.path.isdir(args.folder+"_"+NEWFORMAT):
 else:
     print("Main folder already exists")
 
-folders_to_check = [os.path.join(args.folder, folder) for folder in os.listdir(args.folder)]
+folders_to_check = [os.path.join(args.folder, folder) for folder in os.listdir(args.folder) if os.path.isdir(os.path.join(args.folder, folder))]
 
 def change_root(folder, root):
     split_path = folder.split("\\")
